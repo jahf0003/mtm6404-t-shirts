@@ -10,3 +10,10 @@ body {
   margin: 0 auto;
   padding: 15px;
 }
+
+.app h1 {
+  text-align: center;
+  color: #ffb20a;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
