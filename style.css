@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 15px;
   background-color: #bd00f7;
@@ -36,7 +36,7 @@ body {
 
 .tshirt-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .tshirt-card img {
@@ -45,7 +45,7 @@ body {
   object-fit: contain;
   margin-bottom: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tshirt-card h3 {
@@ -106,7 +106,7 @@ button:hover {
   .app {
     padding: 10px;
   }
-  
+
   .tshirt-grid {
     grid-template-columns: 1fr;
   }
