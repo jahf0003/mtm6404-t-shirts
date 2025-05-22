@@ -63,3 +63,16 @@ const tshirts = [
     quantity: 1
   }
 ]
+
+function TShirt({ tshirt }) {
+  const [stock, setStock] = React.useState(tshirt.stock);
+  const [quantity, setQuantity] = React.useState(1);
+
+  return (
+    <div className="tshirt-card">
+      <img src={`images/${tshirt.image}`} alt={tshirt.title} />
+      <h3>{tshirt.title}</h3>
+      <p>Price: ${tshirt.price.toFixed(2)}</p>
+    </div>
+  );
+}
