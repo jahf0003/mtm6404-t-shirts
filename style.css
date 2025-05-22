@@ -17,3 +17,10 @@ body {
   margin-bottom: 30px;
   font-size: 3rem;
 }
+
+.tshirt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  padding: 20px;
+}
