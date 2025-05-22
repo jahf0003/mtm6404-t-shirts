@@ -68,11 +68,35 @@ function TShirt({ tshirt }) {
   const [stock, setStock] = React.useState(tshirt.stock);
   const [quantity, setQuantity] = React.useState(1);
 
+  const handleBuy = (e) => {
+    e.preventDefault();
+    setStock(stock - quantity);
+  };
+
   return (
     <div className="tshirt-card">
       <img src={`images/${tshirt.image}`} alt={tshirt.title} />
       <h3>{tshirt.title}</h3>
       <p>Price: ${tshirt.price.toFixed(2)}</p>
+      
+      {stock > 0 ? (
+        <>
+          <p>In Stock: {stock}</p>
+          <form onSubmit={handleBuy}>
+            <select 
+              value={quantity}
+              onChange={(e) => setQuantity(Number(e.target.value))}
+            >
+              {Array.from({length: stock}, (_, i) => (
+                <option key={i+1} value={i+1}>{i+1}</option>
+              ))}
+            </select>
+            <button type="submit">Buy</button>
+          </form>
+        </>
+      ) : (
+        <p className="out-of-stock">Out of Stock</p>
+      )}
     </div>
   );
 }
