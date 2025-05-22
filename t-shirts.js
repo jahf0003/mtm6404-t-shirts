@@ -100,3 +100,18 @@ function TShirt({ tshirt }) {
     </div>
   );
 }
+
+function App() {
+  return (
+    <div className="app">
+      <h1>T-Shirts Store</h1>
+      <div className="tshirt-grid">
+        {tshirts.map(tshirt => (
+          <TShirt key={tshirt.id} tshirt={tshirt} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
